@@ -1,6 +1,7 @@
 const http = require('http')
 const httpProxy = require('http-proxy')
 const express = require('express')
+const keepalive = require("./keepAlive");
 const request = require('request')
 const httpsrv = require('httpsrv')
 const fs = require('fs')
@@ -11,6 +12,9 @@ const ENCODED_SECRET = Buffer.from(SECRET).toString('base64')
 
 const PORT = process.env.PORT || 1234
 const app = express()
+
+keepalive();
+
 const proxy = httpProxy.createProxyServer({
 	target: 'ws://localhost:6800',
 	ws: true
