@@ -5,7 +5,7 @@
 	"author": "maple3142 <kirby741852963@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"axios": "^0.19.2",
+		"axios": "^0.21.1",
 		"express": "^4.17.1",
 		"http-proxy": "^1.18.1",
 		"httpsrv": "^0.3.2",
